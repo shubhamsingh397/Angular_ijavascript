@@ -1,0 +1,67 @@
+<div class="mainWindow">
+    <div class="d-flex p-2"> 
+        <img src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103595_1280.png" height="50%" 
+            width="20%" class="img-thumbnail" alt="user image">
+    
+    
+    
+        <div class="p-3">
+            <h4> Welcome! {{user.name}}</h4>
+            <p class="lead"><small> Last Login: {{user.lastLogin}}</small></p>
+        </div>
+    </div>
+    <hr>
+   <div>
+       <h5 class="text-danger">Account Balance: {{user.balance}}</h5>
+   </div>
+   <br>
+   <table class="table table-bordered">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let trans of user.transactions">
+        <td scope="row">{{trans.date}}</td>
+        <td>{{trans.desc}}</td>
+        <td>{{trans.amount}}</td>
+      </tr>
+      
+     
+    </tbody>
+  </table>
+  <hr>
+  <div class="d-flex mt-4">
+       <div class="d-block subscribe">
+        <h6 class ="fs-4">Subscribe To Alerts</h6>
+            <div class="form-check">
+                
+                <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="1">Option 1
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="2">Option 2
+                </label>
+            </div>
+            <div class="form-check pb-3">
+                <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="3" >Option 3
+                </label>
+            </div>
+            
+                <button class="btn btn-primary" type="button">Submit</button>
+        
+       </div>
+        <div class="form-group twoWay">
+            <h6 class ="fs-4">Two Way Data Binding:</h6>
+            <input type="text" class="form-control" id="usr" placeholder="Enter value for two way binding" [(ngModel)]="twoWayData">
+            <p>{{twoWayData}}</p>
+        </div>
+       
+  </div>
+ </div>

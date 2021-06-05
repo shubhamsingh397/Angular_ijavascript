@@ -1,0 +1,31 @@
+.team
+{
+    margin-top: 120px;
+    background-color: lightgray;
+    height: 90%;
+}
+.reusable{
+   margin-left: 300px;
+}
+@media only screen and (max-width: 767px)
+{
+    .team{
+        margin-top: 5px;
+        height: 110%;
+    }
+    .reusable{
+        margin-left: 25%;
+     }
+}
+
+@media only screen and (max-width: 1024px)and (min-width: 768px)
+{
+    .team{
+        margin-top: 5px;
+        height: 120%;
+        width: 80vw;
+    }
+    .reusable{
+        margin-left: 60%;
+     }
+}

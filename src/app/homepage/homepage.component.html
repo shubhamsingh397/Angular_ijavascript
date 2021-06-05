@@ -1,0 +1,38 @@
+
+
+
+
+   <div class="row homepage">
+    <div class="col col-md-3 sidebar">
+      <div class="heading">   
+         <p class="lead text-white fs-6 mb-0 pb-0"><small>Angular Js</small></p>
+        <a routerLink="/"> <p class="h2 text-white pb-4">
+             iJavaScript
+         </p></a>
+      </div>
+      <div class="menu">
+        
+            <a routerLink = "/homepage"  > 
+                <p class="lead h3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard</p>
+            </a>
+         
+         <hr>
+         <a routerLink = "about" routerLinkActive="active" > 
+            <p class="lead h3">About</p>
+        </a>
+
+         <hr>
+         <a routerLink = "team" routerLinkActive="active" > 
+            <p class="lead h3">Team</p>
+        </a>
+      </div>
+    </div>
+    <div class="col col-md-9 content">
+        
+        <!-- <app-dashboard></app-dashboard> -->
+        <!-- <app-about></app-about> -->
+        <!-- <app-team></app-team> -->
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

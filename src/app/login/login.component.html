@@ -1,0 +1,29 @@
+<div class="container login">
+    <div class="container logo">
+        <p class="fs-6 text-white pb-0 mb-0"><small>Angular Js</small></p>
+        <p class="h1 text-white pb-5 font-weight-bolder ">iJavaScript</p>
+    </div>
+    <!-- " -->
+    <form class="form1" (ngSubmit)="onLogin(f)" #f="ngForm">
+      <div class="alert alert-danger error" *ngIf="error">
+        <p>An Error Occurred! {{error}}</p>
+      </div>
+      <!-- <div *ngIf="f.invalid && (f.dirty || f.touched)"class="alert alert-danger error"> -->
+        <p *ngIf="userid.touched && !userid.valid" class="alert alert-danger error">An Error Occurred! user id required</p>
+        <p *ngIf="password.touched && !password.valid"class="alert alert-danger error">An Error Occurred! password required</p>
+      
+        <div class="form-group w-75 UserIDField">
+          <label for="userid" class="text-white fs-3">Email address:</label>
+          <input ngModel name="userid"type="email" class="form-control" placeholder="Enter email" id="userid" required 
+                    minlength="8" maxlength="20" #userid="ngModel">
+                   
+        </div>
+        <div class="form-group w-75 pwdField">
+          <label for="pwd" class="text-white fs-3">Password:</label>
+          <input ngModel name="password" type="password" class="form-control" placeholder="Enter password" id="pwd"
+                required minlength="8" maxlength="20" #password="ngModel">
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3 w-20">Login</button>
+      </form>
+</div>

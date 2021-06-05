@@ -1,0 +1,89 @@
+.login{
+    background-color: #CC0000;
+    width: 75%;
+    height: 500px;
+}
+.logo p{
+    margin-left: 140px;
+}
+.form1 div{
+    padding-left: 150px;
+}
+
+.form1 button{
+    background-color: #CC9900;
+    border-color: #775900;
+    font-weight: bold;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 3px 20px 3px 20px;
+    float: right;
+}
+.error{
+    width: 56%;
+    height: 50px;
+    margin-left: 150px;
+}
+.error p{
+    margin-left: -140px;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .login p{
+        margin-left: 0px;
+        
+    }
+    .error{
+        width: 100%;
+        height: 50px;
+        margin: -0px;
+    }
+    .error p{
+        margin-top: -4px;
+        margin-left: -140px;
+    }
+    .form1 label{
+        margin-left: -145px;
+    }
+    .UserIDField{
+        display: inline;
+    }
+    .pwdField{
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 1024px)and (min-width: 768px){
+    .login p{
+        margin-left: 0px;
+        
+    }
+    .login .logo p
+    {
+        width: 100px;
+    }
+    .error{
+        margin: -0px;
+        width: 70%;
+        height: 50px;
+        
+    }
+    .error p{
+        margin-top: -4px;
+        margin-left: -140px;
+    }
+    .form1 label{
+        margin-left: -145px;
+    }
+    .UserIDField{
+        display: inline;
+    }
+    .pwdField{
+        display: inline;
+    }
+    
+    .logo {
+        width: 50;
+    }
+}
